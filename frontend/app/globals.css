@@ -10,6 +10,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* DevNixEdu brand */
+  --color-brand-navy: #12151C;
+  --color-brand-blue: #0077F5;
+  --color-brand-white: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
