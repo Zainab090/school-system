@@ -63,7 +63,6 @@ export default function StudentSidebar() {
       </button>
 
       <div className="space-y-6">
-        {/* Brand Header */}
         <div className={`flex items-center gap-3 ${isCollapsed ? 'justify-center' : 'px-2'}`}>
           <GraduationCapIcon className="w-12 h-12" />
           {!isCollapsed && (
@@ -77,8 +76,6 @@ export default function StudentSidebar() {
             </div>
           )}
         </div>
-
-        {/* Dynamic Navigation Links */}
         <nav className="space-y-1.5">
           {NAV_ITEMS.map((item, index) => {
             const Icon = item.icon;
@@ -104,10 +101,7 @@ export default function StudentSidebar() {
           })}
         </nav>
       </div>
-
-      {/* Footer / Dynamic Profile & Logout */}
       <div className="border-t border-slate-800 pt-4 space-y-3">
-        {/* Dynamic User Profile Card */}
         <Link
           href="/student/profile"
           title={isCollapsed ? `${user?.name || 'Teacher'} (${user?.role || ''})` : undefined}
