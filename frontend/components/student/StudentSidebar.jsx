@@ -11,7 +11,7 @@ import {
   Loader2,
   NotebookPenIcon,
   BoomBoxIcon,
-  CalendarDays
+  BookOpen
 } from 'lucide-react';
 import api from '@/services/api';
 import GraduationCapIcon from '@/public/GraduationCapIcon';
@@ -20,8 +20,8 @@ import GraduationCapIcon from '@/public/GraduationCapIcon';
 const NAV_ITEMS = [
   { name: 'Overview', href: '/student', icon: LayoutDashboard },
   { name: 'My-Attendance', href: '/student/my-attendance', icon: NotebookPenIcon},
-  { name: 'My-Result', href: '/student/my-result', icon: BoomBoxIcon},
-  { name: 'Schedule', href: '/student/exams', icon: CalendarDays}
+  { name: 'My-Homework', href: '/student/homework-assiengment', icon: BookOpen},
+  { name: 'Exams & Results', href: '/student/exams', icon: BoomBoxIcon}
 ];
 
 export default function StudentSidebar() {
