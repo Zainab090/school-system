@@ -14,3 +14,29 @@
 .dashboard-shadow {
   box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.18);
 }
+
+/* ---- design-match helpers ---- */
+body {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 18%, #ffffff 40%, #f7faff 70%, #ffffff 100%);
+  color: #475569;
+}
+
+.soft-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e4edfb;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px -10px rgba(37, 99, 235, 0.18);
+}
+
+.btn-pill {
+  border-radius: 9999px;
+}
+
+.cta-glow {
+  background: linear-gradient(120deg, #eef5ff 0%, #f7faff 60%, #eaf2ff 100%);
+}
+
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}

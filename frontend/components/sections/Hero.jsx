@@ -4,65 +4,60 @@ import Button from '@/components/ui/Button';
 import { useModal } from '@/context/ModalContext';
 import DashboardMockup from '@/components/hero-mockup/DashboardMockup';
 
-const TRUST_BADGES = ['No credit card required', 'Free setup', 'Cancel anytime'];
+const TRUST_BADGES = [
+  { label: 'No credit card required', icon: 'fa-solid fa-credit-card', tone: 'bg-blue-100 text-blue-600' },
+  { label: 'Free setup', icon: 'fa-solid fa-circle-check', tone: 'bg-blue-100 text-blue-600' },
+  { label: 'Cancel anytime', icon: 'fa-solid fa-circle-check', tone: 'bg-teal-100 text-teal-600' },
+];
 
 export default function Hero() {
   const { openModal } = useModal();
 
   return (
-    <section id="hero" className="relative overflow-hidden pt-10 pb-20 hero-glow">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 px-3.5 py-1.5 rounded-full text-xs font-semibold text-blue-700 shadow-sm">
-              <i className="fa-solid fa-shield-halved text-blue-600" />
-              <span>Trusted by 500+ Schools Across Pakistan</span>
+    <section id="hero" className="relative overflow-hidden pt-8 pb-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-5 space-y-5 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 bg-blue-50/80 border border-blue-100 px-3 py-1.5 rounded-full text-[11px] font-medium text-slate-600">
+              <span className="w-4 h-4 rounded bg-blue-600 text-white flex items-center justify-center text-[8px]">
+                <i className="fa-solid fa-shield-halved" />
+              </span>
+              Trusted by 500+ Schools Across Pakistan
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
-              Simplify School <span className="text-blue-600">Management</span> with{' '}
-              <span className="text-blue-600">DevNixEdu</span>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-navy tracking-tight leading-[1.1]">
+              Simplify School Management with <span className="text-blue-600">DevNixEdu</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
-              A complete school management system to handle admissions, attendance,
-              exams, fees, and parent communication—all in one powerful platform.
+            <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed max-w-md mx-auto lg:mx-0">
+              A complete school management system to handle admissions, attendance, exams, fees, and parent communication — all in one powerful platform.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <Button
-                variant="primary"
-                size="lg"
-                icon="fa-solid fa-arrow-right text-xs"
-                onClick={() => openModal('Create Demo')}
-                className="w-full sm:w-auto"
-              >
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+              <Button variant="primary" size="lg" icon="fa-solid fa-arrow-right text-xs" onClick={() => openModal('Create Demo')}>
                 Create Demo
               </Button>
-              <Button
-                variant="secondary"
-                size="lg"
-                onClick={() => openModal('View Demo')}
-                className="w-full sm:w-auto"
-              >
-                <span className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                  <i className="fa-solid fa-play text-[10px]" />
+              <Button variant="secondary" size="lg" onClick={() => openModal('View Demo')} className="pr-2">
+                View Demo
+                <span className="w-6 h-6 rounded-full bg-navy text-white flex items-center justify-center">
+                  <i className="fa-solid fa-play text-[8px] ml-0.5" />
                 </span>
-                <span>View Demo</span>
               </Button>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4 text-xs font-medium text-gray-500">
-              {TRUST_BADGES.map((badge) => (
-                <div key={badge} className="flex items-center space-x-1.5">
-                  <i className="fa-solid fa-circle-check text-blue-600" />
-                  <span>{badge}</span>
-                </div>
+            <ul className="flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-[11px] text-slate-500">
+              {TRUST_BADGES.map((b) => (
+                <li key={b.label} className="flex items-center gap-1.5">
+                  <span className={`w-4 h-4 rounded flex items-center justify-center text-[8px] ${b.tone}`}>
+                    <i className={b.icon} />
+                  </span>
+                  {b.label}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          <div className="lg:col-span-6 relative flex justify-center items-center">
+          <div className="lg:col-span-7 pb-4">
             <DashboardMockup />
           </div>
         </div>

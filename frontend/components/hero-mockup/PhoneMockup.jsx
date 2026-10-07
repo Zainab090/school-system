@@ -1,16 +1,31 @@
+const MENU = [
+  { icon: 'fa-solid fa-table-cells-large', label: 'Dashboard', c: 'bg-blue-500' },
+  { icon: 'fa-solid fa-calendar-check', label: 'Attendance', c: 'bg-sky-500' },
+  { icon: 'fa-solid fa-file-lines', label: 'Exams', c: 'bg-emerald-500' },
+  { icon: 'fa-solid fa-wallet', label: 'Fees', c: 'bg-amber-500' },
+  { icon: 'fa-solid fa-bell', label: 'Alerts', c: 'bg-orange-500' },
+];
+
 export default function PhoneMockup() {
   return (
-    <div className="absolute -bottom-6 -left-6 sm:-left-10 w-32 sm:w-40 bg-slate-900 rounded-3xl p-2.5 shadow-2xl border-4 border-slate-800 hidden sm:block">
-      <div className="bg-slate-800 rounded-2xl p-2 text-white text-center space-y-2">
-        <div className="w-8 h-8 rounded-full bg-blue-600 mx-auto flex items-center justify-center text-xs font-bold">
-          NE
+    <div className="absolute left-[-2%] bottom-[-5%] w-[17%] min-w-[104px] aspect-[9/18.5] bg-white rounded-[18px] border-[3px] border-slate-900 shadow-2xl shadow-blue-900/25 overflow-hidden hidden sm:flex flex-col">
+      <div className="mx-auto mt-1 h-1 w-8 rounded-full bg-slate-900" />
+      <div className="px-2 pt-2 text-center">
+        <div className="mx-auto w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px]">
+          <i className="fa-solid fa-graduation-cap" />
         </div>
-        <div className="text-[10px] font-bold">Parent App</div>
-        <div className="bg-slate-700 p-1.5 rounded-lg text-[8px] text-left">
-          <div className="font-semibold text-emerald-400">Attendance</div>
-          <div>Ali is Present today</div>
-        </div>
+        <p className="mt-1 text-[7px] font-bold text-navy">Welcome Back</p>
       </div>
+      <ul className="px-2 mt-2 space-y-1.5">
+        {MENU.map((m) => (
+          <li key={m.label} className="flex items-center gap-1.5 text-[7px] font-semibold text-navy bg-slate-50 rounded-md px-1.5 py-1">
+            <span className={`w-3.5 h-3.5 rounded-full ${m.c} text-white flex items-center justify-center text-[6px]`}>
+              <i className={m.icon} />
+            </span>
+            {m.label}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
       </head>
-      <body className="bg-white text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+      <body className="text-slate-700 antialiased selection:bg-blue-600 selection:text-white">
         <Providers>{children}</Providers>
       </body>
     </html>

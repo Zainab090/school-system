@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: '#2563EB',
         darkBg: '#0F172A',
+        navy: '#0B1B3F',
       },
       fontFamily: {
         sans: ['var(--font-jakarta)', 'sans-serif'],

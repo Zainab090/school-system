@@ -4,24 +4,17 @@ import { useScrollTo } from '@/hooks/useScrollTo';
 
 export default function Logo({ variant = 'dark' }) {
   const { scrollToTop } = useScrollTo();
-  const textColor = variant === 'dark' ? 'text-gray-900' : 'text-white';
+  const text = variant === 'dark' ? 'text-navy' : 'text-white';
 
   return (
-    <div
-      onClick={scrollToTop}
-      className="flex items-center space-x-3 cursor-pointer group"
-    >
-      <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/25 group-hover:scale-105 transition-transform">
-        <i className="fa-solid fa-graduation-cap text-lg" />
-      </div>
-      <div>
-        <span className={`text-xl font-extrabold ${textColor} tracking-tight`}>
-          DevNixEdu
+    <button onClick={scrollToTop} className="flex items-center gap-2 text-left" aria-label="DevNixEdu home">
+      <i className="fa-solid fa-graduation-cap text-[28px] text-blue-600" />
+      <span>
+        <span className={`block text-[19px] font-extrabold leading-none tracking-tight ${text}`}>
+          DevNix<span className="text-blue-600">Edu</span>
         </span>
-        <span className="block text-[10px] font-semibold text-gray-400 tracking-wider uppercase">
-          Smart School Management
-        </span>
-      </div>
-    </div>
+        <span className="block text-[8px] font-medium text-slate-500 leading-none mt-1">Smart School Management</span>
+      </span>
+    </button>
   );
 }

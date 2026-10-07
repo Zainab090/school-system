@@ -1,8 +1,17 @@
 export const FEATURES = [
-  { icon: 'fa-solid fa-id-card', title: 'Smart Admissions', desc: 'Manage online inquiry forms, entrance exams, student enrollment, and automated roll number generation seamlessly.' },
-  { icon: 'fa-solid fa-fingerprint', title: 'Biometric Attendance', desc: 'Integrate fingerprint and RFID scanners with instant SMS alerts sent directly to parents when students arrive.' },
-  { icon: 'fa-solid fa-file-invoice-dollar', title: 'Fee Management', desc: 'Automate fee challan generation, track pending dues, manage concessions, and collect online payments.' },
-  { icon: 'fa-solid fa-book-open-reader', title: 'Exam & Result Cards', desc: 'Build custom grading scales, compute term results instantly, and generate professional report cards in seconds.' },
-  { icon: 'fa-solid fa-comments', title: 'Parent Portal & SMS', desc: 'Bridge the communication gap with dedicated mobile apps and bulk SMS broadcasts for announcements and homework.' },
-  { icon: 'fa-solid fa-chart-line', title: 'Advanced Analytics', desc: 'Comprehensive financial reports, performance analytics per class, and teacher workload summaries.' },
+  { icon: 'fa-solid fa-user-graduate', title: 'Student Management', points: ['Student profiles', 'Enrollment & promotion', 'Academic history'] },
+  { icon: 'fa-solid fa-calendar-check', title: 'Smart Attendance', points: ['Digital attendance', 'Biometric support', 'SMS alerts', 'Attendance reports'] },
+  { icon: 'fa-solid fa-money-check-dollar', title: 'Fee Management', points: ['Automated fee challan', 'Online payments', 'Defaulter tracking', 'Receipts'] },
+  { icon: 'fa-solid fa-clipboard-list', title: 'Exam & Results', points: ['Exam scheduling', 'Grade entry', 'Result cards', 'Performance analytics'] },
+  { icon: 'fa-solid fa-comments', title: 'Parent Communication', points: ['SMS & WhatsApp', 'App notifications', 'Fee/results/announcements'] },
+  { icon: 'fa-solid fa-calendar-days', title: 'Timetable & Schedule', points: ['Class schedules', 'Teacher allocation', 'Conflict-free timetable'] },
+  { icon: 'fa-solid fa-bus', title: 'Transport Management', points: ['Route planning', 'Vehicle tracking', 'Driver management', 'Transport fees'] },
+  { icon: 'fa-solid fa-chart-line', title: 'Reports & Analytics', points: ['Dashboards', 'Custom reports', 'Data-driven insights'] },
+  // second page
+  { icon: 'fa-solid fa-id-card', title: 'Smart Admissions', points: ['Online inquiry forms', 'Entrance test scoring', 'Merit lists', 'Roll number generation'] },
+  { icon: 'fa-solid fa-user-tie', title: 'Staff & Payroll', points: ['Staff profiles', 'Salary & deductions', 'Leave tracking', 'Payslips'] },
+  { icon: 'fa-solid fa-book', title: 'Library', points: ['Book catalogue', 'Issue & return', 'Fine tracking'] },
+  { icon: 'fa-solid fa-boxes-stacked', title: 'Inventory', points: ['Stock records', 'Purchase tracking', 'Asset allocation'] },
 ];
+
+export const FEATURES_PER_PAGE = 8;
