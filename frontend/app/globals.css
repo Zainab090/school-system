@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* apna custom CSS yahan neeche */
+.hero-glow {
+  background: radial-gradient(
+    circle at 50% 20%,
+    rgba(37, 99, 235, 0.08) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.dashboard-shadow {
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.18);
+}
